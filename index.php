@@ -12,7 +12,7 @@
 <script src="control.js"></script>
 
 <?php
-echo "Hello world! This is working! :)";
+echo "Hello world! This is the second try :)";
 ?>
 <br />
 <?php
