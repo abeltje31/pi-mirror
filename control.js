@@ -106,6 +106,6 @@ jQuery(document).ready(function($) {
 
 		setTimeout(function() {
 			updateCurrentWeather();
-		}, 60000);
+		}, 300000);
 	})();
 });
