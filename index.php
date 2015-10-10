@@ -16,7 +16,8 @@ echo "Hello world! This is working! :)";
 ?>
 <br />
 <?php
-echo date("H:i:s, d/m/Y");
+echo "The current date and time is: "
+echo date("d/m/Y H:i:s");
 ?>
 
 </body>
