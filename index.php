@@ -13,9 +13,9 @@
 <body>
 
 
-<script src="jquery.js"></script>
-<script src="config.js"></script>
-<script src="control.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/config.js"></script>
+<script src="js/control.js"></script>
 
 <div class="top right"><div class="windsun small dimmed"></div><div class="temp"></div><div class="forecast small dimmed"></div></div>
 
