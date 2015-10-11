@@ -79,7 +79,8 @@ jQuery(document).ready(function($) {
 				if((obj.EindBestemming=="Eindhoven")||
 				(obj.RouteTekst.indexOf("Eindhoven")>0))
 				{
-					var row = $('<tr />').css('opacity', opacity);;
+					var row = $('<tr />').css('opacity', opacity);
+					row.append($('<td/>').html(obj.VertrekSpoor));
 					row.append($('<td/>').html(obj.EindBestemming));
 					row.append($('<td/>').html(moment(obj.VertrekTijd).format("HH:mm")));
 					row.append($('<td/>').html(obj.VertrekVertragingTekst));
