@@ -81,7 +81,7 @@ jQuery(document).ready(function($) {
 				{
 					var row = $('<tr />').css('opacity', opacity);;
 					row.append($('<td/>').html(obj.EindBestemming));
-					row.append($('<td/>').html(obj.VertrekTijd));
+					row.append($('<td/>').html(moment(obj.VertrekTijd).format("HH:mm")));
 					row.append($('<td/>').html(obj.VertrekVertragingTekst));
 				
 					nsTable.append(row);
