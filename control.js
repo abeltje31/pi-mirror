@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
         });
         setTimeout(function() {
             checkVersion();
-        }, 3000);
+        }, 10000);
     })();
 	
 	(function updateCurrentWeather()
