@@ -93,6 +93,10 @@ jQuery(document).ready(function($) {
 			$('.ns').updateWithText(nsTable, 1000);
 		});
 	
+		setTimeout(function() {
+			updateNS();
+		}, 60000);
+	
 	})();
 	
 	(function updateCurrentWeather()
