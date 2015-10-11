@@ -37,6 +37,9 @@ function kmh2beaufort(kmh)
 }
 
 jQuery(document).ready(function($) {
+
+    moment.lang(lang);
+
     (function checkVersion()
     {
         $.getJSON('gitversion.php', {}, function(json, textStatus) {
@@ -51,6 +54,44 @@ jQuery(document).ready(function($) {
             checkVersion();
         }, 10000);
     })();
+	
+	(function updateTime()
+	{
+        var now = moment();
+        var date = now.format('LLLL').split(' ',4);
+        date = date[0] + ' ' + date[1] + ' ' + date[2] + ' ' + date[3];
+
+		$('.date').html(date);
+		$('.time').html(now.format('HH') + ':' + now.format('mm') + '<span class="sec">'+now.format('ss')+'</span>');
+
+		setTimeout(function() {
+			updateTime();
+		}, 1000);
+	})();
+	
+	(function updateNS()
+	{
+		$.getJSON('ns.php', function(json, textStatus){
+			var nsTable = $('<table />').addClass('ns-table').addClass('small');
+			var nsData = json.VertrekkendeTrein;
+			var opacity = 1;
+			$.each(nsData, function(idx, obj){
+				if(obj.EindBestemming=="Eindhoven")
+				{
+					var row = $('<tr />').css('opacity', opacity);;
+					row.append($('<td/>').html(obj.EindBestemming));
+					row.append($('<td/>').html(obj.VertrekTijd));
+					row.append($('<td/>').html(obj.VertrekVertragingTekst));
+				
+					nsTable.append(row);
+					opacity -= 0.05;
+				}
+			});
+		
+			$('.ns').updateWithText(nsTable, 1000);
+		});
+	
+	})();
 	
 	(function updateCurrentWeather()
 	{
@@ -95,7 +136,7 @@ jQuery(document).ready(function($) {
 			var sunrise = new Date(json.sys.sunrise*1000).toTimeString().substring(0,5);
 			var sunset = new Date(json.sys.sunset*1000).toTimeString().substring(0,5);
 
-			var windString = '<span class="wi wi-strong-wind xdimmed"></span> ' + kmh2beaufort(wind) ;
+			var windString = '<span class="wi wi-strong-wind xdimmed"></span> ' + wind;
 			var sunString = '<span class="wi wi-sunrise xdimmed"></span> ' + sunrise;
 			if (json.sys.sunrise*1000 < now && json.sys.sunset*1000 > now) {
 				sunString = '<span class="wi wi-sunset xdimmed"></span> ' + sunset;

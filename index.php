@@ -14,10 +14,23 @@
 
 
 <script src="js/jquery.js"></script>
+<script src="js/moment-with-langs.min.js"></script>
 <script src="js/config.js"></script>
 <script src="js/control.js"></script>
 
-<div class="top right"><div class="windsun small dimmed"></div><div class="temp"></div><div class="forecast small dimmed"></div></div>
+<div class="top left">
+	<div class="date small dimmed"></div>
+	<div class="time"></div>
+	<div class="ns"></div>
+</div>
+
+<div class="top right">
+	<div class="windsun small dimmed"></div>
+	<div class="temp"></div>
+	<div class="forecast small dimmed"></div>
+</div>
+
+
 
 </body>
 </html>
