@@ -21,7 +21,7 @@ jQuery.fn.outerHTML = function(s) {
 
 function roundVal(temp)
 {
-	return Math.round(temp * 10) / 10;
+	return parseFloat(Math.round(temp * 100) / 100).toFixed(1);
 }
 
 function kmh2beaufort(kmh)
