@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
 					row.append($('<td/>').html(obj.VertrekVertragingTekst));
 				
 					nsTable.append(row);
-					opacity -= 0.05;
+					opacity -= 0.1;
 				}
 			});
 		
@@ -224,7 +224,7 @@ jQuery(document).ready(function($) {
 				row.append($('<td/>').addClass('temp-min').html(roundVal(forecast.temp_min)));
 
 				forecastTable.append(row);
-				opacity -= 0.155;
+				opacity -= 0.1;
 			}
 
 
