@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'train';
+  src: url('../font/trainicons-regular-webfont.eot');
+  src: url('../font/trainicons-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../font/trainicons-regular-webfont.woff') format('woff'), url('../font/trainicons-regular-webfont.ttf') format('truetype'), url('../font/trainicons-regular-webfont.svg#trainicons-regular-webfontRg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="train-"],
+[class*=" train-"] {
+  font-family: train;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+[class^="train-"]:before,
+[class*=" train-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+.train-ic:before {
+  content: "i";
+}
+.train-sprinter:before {
+  content: "s";
+}

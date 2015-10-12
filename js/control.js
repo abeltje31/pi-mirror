@@ -82,11 +82,11 @@ jQuery(document).ready(function($) {
 					var row = $('<tr />').css('opacity', opacity);
 					if(obj.TreinSoort=="Intercity")
 					{
-						row.append($('<td/>').html('<img src="img/logo_ic.png" widht="20px" height="20px" />'));
+						row.append($('<td/>').addClass('icon-small').addClass('train-ic'));
 					}
 					else if(obj.TreinSoort=="Sprinter")
 					{
-						row.append($('<td/>').html('<img src="img/logo_stoptrein.png" widht="20px" height="20px" />'));
+						row.append($('<td/>').addClass('icon-small').addClass('train-sprinter'));
 					}
 					row.append($('<td/>').html(obj.VertrekSpoor));
 					row.append($('<td/>').html(obj.EindBestemming));

@@ -5,6 +5,7 @@
 		<?php include('css/main.css') ?>
 	</style>
 	<link rel="stylesheet" type="text/css" href="css/weather-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/train-icons.css">
     <script>
         var currentgitversion = "<?php echo trim(shell_exec('git rev-parse HEAD')) ?>";
     </script>
@@ -21,7 +22,7 @@
 <div class="top left">
 	<div class="date small dimmed"></div>
 	<div class="time"></div>
-	<div class="ns"></div>
+	<div class="ns small dimmed""></div>
 </div>
 
 <div class="top right">
