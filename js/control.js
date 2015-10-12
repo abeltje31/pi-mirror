@@ -77,7 +77,7 @@ jQuery(document).ready(function($) {
 			var opacity = 1;
 			$.each(nsData, function(idx, obj){
 				if((obj.EindBestemming=="Eindhoven")||
-				(obj.RouteTekst.indexOf("Eindhoven")>0))
+				(obj.RouteTekst.indexOf("Eindhoven")>=0))
 				{
 					var row = $('<tr />').css('opacity', opacity);
 					row.append($('<td/>').html(obj.VertrekSpoor));
