@@ -77,11 +77,20 @@ jQuery(document).ready(function($) {
 			var opacity = 1;
 			$.each(nsData, function(idx, obj){
 				if((obj.EindBestemming=="Eindhoven")||
-				(obj.RouteTekst.indexOf("Eindhoven")>0))
+				(obj.RouteTekst.indexOf("Eindhoven")>=0))
 				{
-					var row = $('<tr />').css('opacity', opacity);;
+					var row = $('<tr />').css('opacity', opacity);
+					if(obj.TreinSoort=="Intercity")
+					{
+						row.append($('<td/>').html('<img src="img/logo_ic.png" widht="20px" height="20px" />'));
+					}
+					else if(obj.TreinSoort=="Sprinter")
+					{
+						row.append($('<td/>').html('<img src="img/logo_stoptrein.png" widht="20px" height="20px" />'));
+					}
+					row.append($('<td/>').html(obj.VertrekSpoor));
 					row.append($('<td/>').html(obj.EindBestemming));
-					row.append($('<td/>').html(obj.VertrekTijd));
+					row.append($('<td/>').html(moment(obj.VertrekTijd).format("HH:mm")));
 					row.append($('<td/>').html(obj.VertrekVertragingTekst));
 				
 					nsTable.append(row);
@@ -91,6 +100,10 @@ jQuery(document).ready(function($) {
 		
 			$('.ns').updateWithText(nsTable, 1000);
 		});
+	
+		setTimeout(function() {
+			updateNS();
+		}, 60000);
 	
 	})();
 	
