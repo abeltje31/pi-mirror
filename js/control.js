@@ -80,6 +80,14 @@ jQuery(document).ready(function($) {
 				(obj.RouteTekst.indexOf("Eindhoven")>=0))
 				{
 					var row = $('<tr />').css('opacity', opacity);
+					if(obj.TreinSoort=="Intercity")
+					{
+						row.append($('<td/>').html('<img src="img/logo_ic.png" widht="20px" height="20px" />'));
+					}
+					else if(obj.TreinSoort=="Sprinter")
+					{
+						row.append($('<td/>').html('<img src="img/logo_stoptrein.png" widht="20px" height="20px" />'));
+					}
 					row.append($('<td/>').html(obj.VertrekSpoor));
 					row.append($('<td/>').html(obj.EindBestemming));
 					row.append($('<td/>').html(moment(obj.VertrekTijd).format("HH:mm")));
