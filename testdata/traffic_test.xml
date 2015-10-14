@@ -1,0 +1,267 @@
+<fileindex>
+	<filedata>
+		<title>www.routeradard.nl - file informatie</title>
+		<link>http://www.routeradar.nl</link>
+		<description>XML feed fileinformatie</description>
+		<language>nl-nl</language>
+		<copyright>
+    (C)opyright 2005 - 2014 Buienradar B.V. Alle rechten voorbehouden
+		</copyright>
+		<gebruik>
+    Deze XML feed mag vrij worden gebruikt onder voorwaarde van bronvermelding RouteRadar.NL inclusief een hyperlink naar http://www.routeradar.nl. Aan de feed kunnen door gebruikers of andere personen geen rechten worden ontleend.
+		</gebruik>
+		<uitleg>
+    hectostart = startpunt in hectometers van de betreffende weg | hectoeind = eindpunt in hectometers van de betreffende weg | afstand = lengte file in kilometers | trend = 0: geen verandering in lengte file | trend = 1: toename in lengte file | trend = -1: afname in lengte file
+		</uitleg>
+		<image>
+			<title>RouteRadar.nl</title>
+			<link>http://www.routeradar.nl/</link>
+			<url/>
+			<width/>
+			<height/>
+		</image>
+		<meldingen>
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 1</gevolg>
+				<van>Rechts ok</van>
+				<naar>Links ok</naar>
+				<hectostart>134</hectostart>
+				<hectoeind>100</hectoeind>
+				<afstand>1</afstand>
+			</melding>
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 2</gevolg>
+				<van>Links ok</van>
+				<naar>Rechts ok</naar>
+				<hectostart>120</hectostart>
+				<hectoeind>136</hectoeind>
+				<afstand>2</afstand>
+			</melding>
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 3</gevolg>
+				<van>Rechts ok</van>
+				<naar>Links ok</naar>
+				<hectostart>134</hectostart>
+				<hectoeind>120</hectoeind>
+				<afstand>3</afstand>
+			</melding>
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 4</gevolg>
+				<van>Links ok</van>
+				<naar>Rechts ok</naar>
+				<hectostart>120</hectostart>
+				<hectoeind>134</hectoeind>
+				<afstand>4</afstand>
+			</melding>			
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 5</gevolg>
+				<van>Rechts ok</van>
+				<naar>Links ok</naar>
+				<hectostart>136</hectostart>
+				<hectoeind>100</hectoeind>
+				<afstand>5</afstand>
+			</melding>
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 6</gevolg>
+				<van>Links ok</van>
+				<naar>Rechts ok</naar>
+				<hectostart>100</hectostart>
+				<hectoeind>136</hectoeind>
+				<afstand>6</afstand>
+			</melding>
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 7</gevolg>
+				<van>Rechts nok</van>
+				<naar>Links nok</naar>
+				<hectostart>100</hectostart>
+				<hectoeind>80</hectoeind>
+				<afstand>7</afstand>
+			</melding>		
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 8</gevolg>
+				<van>Links nok</van>
+				<naar>Rechts nok</naar>
+				<hectostart>80</hectostart>
+				<hectoeind>100</hectoeind>
+				<afstand>8</afstand>
+			</melding>
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 9</gevolg>
+				<van>Rechts nok</van>
+				<naar>Links nok</naar>
+				<hectostart>150</hectostart>
+				<hectoeind>136</hectoeind>
+				<afstand>9</afstand>
+			</melding>		
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 10</gevolg>
+				<van>Links nok</van>
+				<naar>Rechts nok</naar>
+				<hectostart>136</hectostart>
+				<hectoeind>150</hectoeind>
+				<afstand>10</afstand>
+			</melding>	
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 11</gevolg>
+				<van>Rechts nok</van>
+				<naar>Links nok</naar>
+				<hectostart>134</hectostart>
+				<hectoeind>100</hectoeind>
+				<afstand>11</afstand>
+			</melding>
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 12</gevolg>
+				<van>Links nok</van>
+				<naar>Rechts nok</naar>
+				<hectostart>120</hectostart>
+				<hectoeind>136</hectoeind>
+				<afstand>12</afstand>
+			</melding>
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 13</gevolg>
+				<van>Rechts nok</van>
+				<naar>Links nok</naar>
+				<hectostart>134</hectostart>
+				<hectoeind>120</hectoeind>
+				<afstand>13</afstand>
+			</melding>
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 14</gevolg>
+				<van>Links nok</van>
+				<naar>Rechts nok</naar>
+				<hectostart>120</hectostart>
+				<hectoeind>134</hectoeind>
+				<afstand>14</afstand>
+			</melding>			
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 15</gevolg>
+				<van>Rechts nok</van>
+				<naar>Links nok</naar>
+				<hectostart>136</hectostart>
+				<hectoeind>100</hectoeind>
+				<afstand>15</afstand>
+			</melding>
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 16</gevolg>
+				<van>Links nok</van>
+				<naar>Rechts nok</naar>
+				<hectostart>100</hectostart>
+				<hectoeind>136</hectoeind>
+				<afstand>16</afstand>
+			</melding>
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 17</gevolg>
+				<van>Rechts nok</van>
+				<naar>Links nok</naar>
+				<hectostart>100</hectostart>
+				<hectoeind>80</hectoeind>
+				<afstand>17</afstand>
+			</melding>		
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 18</gevolg>
+				<van>Links nok</van>
+				<naar>Rechts nok</naar>
+				<hectostart>80</hectostart>
+				<hectoeind>100</hectoeind>
+				<afstand>18</afstand>
+			</melding>
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 19</gevolg>
+				<van>Rechts nok</van>
+				<naar>Links nok</naar>
+				<hectostart>150</hectostart>
+				<hectoeind>136</hectoeind>
+				<afstand>19</afstand>
+			</melding>		
+			<melding>
+				<wegnr>A95</wegnr>
+				<gevolg>Testcase 20</gevolg>
+				<van>Links nok</van>
+				<naar>Rechts nok</naar>
+				<hectostart>136</hectostart>
+				<hectoeind>150</hectoeind>
+				<afstand>20</afstand>
+			</melding>		
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 21</gevolg>
+				<naar>links ok</naar>
+				<vansub>Geen data beschikbaar</vansub>
+				<naarsub>Geen data beschikbaar</naarsub>
+				<hectostart>134</hectostart>
+				<hectoeind>120</hectoeind>
+				<afstand>21</afstand>
+				<starttijd>14/10/2015 6:18:00 PM</starttijd>
+				<link>http://www.routeradar.nl</link>
+				<trend>1</trend>
+				<trendtekst>De file neemt toe.</trendtekst>
+			</melding>	
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 22</gevolg>
+				<van>rechts ok</van>
+				<vansub>Geen data beschikbaar</vansub>
+				<naarsub>Geen data beschikbaar</naarsub>
+				<hectostart>134</hectostart>
+				<hectoeind>120</hectoeind>
+				<afstand>22</afstand>
+				<starttijd>14/10/2015 6:18:00 PM</starttijd>
+				<link>http://www.routeradar.nl</link>
+				<trend>1</trend>
+				<trendtekst>De file neemt toe.</trendtekst>
+			</melding>
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 23</gevolg>
+				<naar>links ok</naar>
+				<van>rechts</van>
+				<vansub>Geen data beschikbaar</vansub>
+				<naarsub>Geen data beschikbaar</naarsub>
+				<hectoeind>120</hectoeind>
+				<afstand>23</afstand>
+				<starttijd>14/10/2015 6:18:00 PM</starttijd>
+				<link>http://www.routeradar.nl</link>
+				<trend>1</trend>
+				<trendtekst>De file neemt toe.</trendtekst>
+			</melding>
+			<melding>
+				<wegnr>A59</wegnr>
+				<gevolg>Testcase 24</gevolg>
+				<naar>links ok</naar>
+				<van>rechts</van>
+				<vansub>Geen data beschikbaar</vansub>
+				<naarsub>Geen data beschikbaar</naarsub>
+				<hectostart>134</hectostart>
+				<afstand>24</afstand>
+				<starttijd>14/10/2015 6:18:00 PM</starttijd>
+				<link>http://www.routeradar.nl</link>
+				<trend>1</trend>
+				<trendtekst>De file neemt toe.</trendtekst>
+			</melding>
+		</meldingen>
+		<samenvatting>
+			<urltekst>&lt;a href="http://www.routeradar.nl"&gt;&lt;img src="3"&gt;&lt;/a&gt;&lt;br/&gt;Er zijn momenteel &lt;a href="http://www.routeradar.nl"&gt;3 files&lt;/a&gt; met een lengte van &lt;a href="http://www.routeradar.nl"&gt;8 km&lt;/a&gt;.</urltekst>
+			<aantal>3</aantal>
+			<kms>8</kms>
+		</samenvatting>
+	</filedata>
+</fileindex>

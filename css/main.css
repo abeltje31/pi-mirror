@@ -163,6 +163,17 @@ body, html {
 	padding-right: 25px;
 }
 
+.traffic-table {
+	font-size: 20px;
+	letter-spacing: 1px;
+	line-height: 30px;
+	margin-top: 100px;
+}
+
+.traffic-table td {
+	padding-right: 25px;
+}
+
 .forecast-table {
 	float: right;
 	text-align: right;

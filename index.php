@@ -22,7 +22,8 @@
 <div class="top left">
 	<div class="date small dimmed"></div>
 	<div class="time"></div>
-	<div class="ns small dimmed""></div>
+	<div class="ns small dimmed"></div>
+	<div class="traffic small dimmed"></div>
 </div>
 
 <div class="top right">

@@ -1,17 +1,15 @@
 <?php
 	include 'config.php';
-
+	
 	if($useTestData)
 	{
-		$data = file_get_contents("testdata/ns_test.xml");
+		$data = file_get_contents("testdata/traffic_test.xml");
 	}
 	else
 	{
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,$urlNS);
+		curl_setopt($ch, CURLOPT_URL,$urlTraffic);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-		curl_setopt($ch, CURLOPT_USERPWD, "$usernameNS:$passwordNS");
 		$data = curl_exec($ch);
 		curl_close($ch);
 	}

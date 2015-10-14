@@ -88,6 +88,10 @@ jQuery(document).ready(function($) {
 					{
 						row.append($('<td/>').addClass('icon-small').addClass('train-sprinter'));
 					}
+					else
+					{
+						row.append($('<td/>'));
+					}
 					row.append($('<td/>').html(obj.VertrekSpoor));
 					row.append($('<td/>').html(obj.EindBestemming));
 					row.append($('<td/>').html(moment(obj.VertrekTijd).format("HH:mm")));
@@ -103,6 +107,48 @@ jQuery(document).ready(function($) {
 	
 		setTimeout(function() {
 			updateNS();
+		}, 60000);
+	
+	})();
+	
+	
+	// 118.7
+	// 134,4
+
+	(function updateTraffic()
+	{
+		$.getJSON('traffic.php', function(json, textStatus){
+			var trafficTable = $('<table />').addClass('traffic-table').addClass('small');
+			var filedata = json.filedata;
+			var meldingen = filedata.meldingen;
+			var melding = meldingen.melding;
+			var opacity = 1;
+			$.each(melding, function(idx, obj){
+				if((obj.wegnr=="A59"))
+				{
+					if(((parseFloat(obj.hectostart)<=134.3)&&(parseFloat(obj.hectostart)>=118.7))||
+					   ((parseFloat(obj.hectoeind)<=134.3)&&(parseFloat(obj.hectoeind)>=118.7))||
+					   ((parseFloat(obj.hectostart)>=134.3)&&(parseFloat(obj.hectoeind)<=118.7))||
+					   ((parseFloat(obj.hectoeind)>=134.3)&&(parseFloat(obj.hectostart)<=118.7)))
+					{
+						var row = $('<tr />').css('opacity', opacity);
+						row.append($('<td/>').html(obj.wegnr));
+						row.append($('<td/>').html(obj.hectostart));	
+						row.append($('<td/>').html(obj.hectoeind));
+						row.append($('<td/>').html(obj.van));
+						row.append($('<td/>').html(obj.naar));
+						row.append($('<td/>').html(obj.afstand + " km"));
+						trafficTable.append(row);
+						opacity -= 0.1;
+					}
+				}
+			});
+		
+			$('.traffic').updateWithText(trafficTable, 1000);
+		});
+	
+		setTimeout(function() {
+			updateTraffic();
 		}, 60000);
 	
 	})();

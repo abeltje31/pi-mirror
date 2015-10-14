@@ -1,0 +1,90 @@
+<ActueleVertrekTijden>
+	<VertrekkendeTrein>
+		<RitNummer>879</RitNummer>
+		<VertrekTijd>2015-10-14T22:08:00+0200</VertrekTijd>
+		<VertrekVertraging>PT1M</VertrekVertraging>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<EindBestemming>Maastricht</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
+		<Vervoerder>NS</Vervoerder>
+		<VertrekSpoor wijziging="false">1</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<RitNummer>9681</RitNummer>
+		<VertrekTijd>2015-10-14T22:10:00+0200</VertrekTijd>
+		<EindBestemming>Eindhoven</EindBestemming>
+		<TreinSoort>Sprinter</TreinSoort>
+		<RouteTekst>Boxtel</RouteTekst>
+		<Vervoerder>NS</Vervoerder>
+		<VertrekSpoor wijziging="false">2</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<RitNummer>9683</RitNummer>
+		<VertrekTijd>2015-10-14T22:40:00+0200</VertrekTijd>
+		<EindBestemming>Deurne</EindBestemming>
+		<TreinSoort>Sprinter</TreinSoort>
+		<RouteTekst>Boxtel, Eindhoven, Helmond</RouteTekst>
+		<Vervoerder>NS</Vervoerder>
+		<VertrekSpoor wijziging="false">3</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<EindBestemming>Maastricht</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
+		<VertrekSpoor wijziging="false">4a</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekTijd>Not a valid time</VertrekTijd>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<EindBestemming>Maastricht</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
+		<VertrekSpoor wijziging="false">4b</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekTijd>2015-10-14T22:08:00+0200</VertrekTijd>
+		<EindBestemming>Maastricht</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
+		<VertrekSpoor wijziging="false">5</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekTijd>2015-10-14T22:08:00+0200</VertrekTijd>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<TreinSoort>Intercity</TreinSoort>
+		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
+		<VertrekSpoor wijziging="false">6</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekTijd>2015-10-14T22:08:00+0200</VertrekTijd>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<EindBestemming>Maastricht</EindBestemming>
+		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
+		<VertrekSpoor wijziging="false">7a</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekTijd>2015-10-14T22:08:00+0200</VertrekTijd>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<EindBestemming>Maastricht</EindBestemming>
+		<TreinSoort>NotATrain</TreinSoort>
+		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
+		<VertrekSpoor wijziging="false">7b</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekTijd>2015-10-14T22:08:00+0200</VertrekTijd>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<EindBestemming>Maastricht</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekTijd>2015-10-14T22:08:00+0200</VertrekTijd>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<EindBestemming>Maastricht</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
+		<VertrekSpoor wijziging="true">8b</VertrekSpoor>
+	</VertrekkendeTrein>
+</ActueleVertrekTijden>
