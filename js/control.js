@@ -38,7 +38,7 @@ function kmh2beaufort(kmh)
 
 jQuery(document).ready(function($) {
 
-    moment.lang(lang);
+    moment.lang('nl');
 
     (function checkVersion()
     {
