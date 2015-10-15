@@ -87,4 +87,19 @@
 		<RouteTekst>Eindhoven, Weert, Roermond</RouteTekst>
 		<VertrekSpoor wijziging="true">8b</VertrekSpoor>
 	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekTijd>2015-10-14T22:08:00+0200</VertrekTijd>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<EindBestemming>Maastricht</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		<RouteTekst></RouteTekst>
+		<VertrekSpoor wijziging="false">9a</VertrekSpoor>
+	</VertrekkendeTrein>
+	<VertrekkendeTrein>
+		<VertrekTijd>2015-10-14T22:08:00+0200</VertrekTijd>
+		<VertrekVertragingTekst>+1 min</VertrekVertragingTekst>
+		<EindBestemming>Maastricht</EindBestemming>
+		<TreinSoort>Intercity</TreinSoort>
+		<VertrekSpoor wijziging="false">9b</VertrekSpoor>
+	</VertrekkendeTrein>	
 </ActueleVertrekTijden>

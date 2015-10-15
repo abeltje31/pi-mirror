@@ -7,8 +7,9 @@
 	}
 	else
 	{
+		$url = $urlNS . $_GET['station'];
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,$urlNS);
+		curl_setopt($ch, CURLOPT_URL,$url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 		curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 		curl_setopt($ch, CURLOPT_USERPWD, "$usernameNS:$passwordNS");

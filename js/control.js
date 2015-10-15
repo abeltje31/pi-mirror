@@ -71,31 +71,105 @@ jQuery(document).ready(function($) {
 	
 	(function updateNS()
 	{
-		$.getJSON('ns.php', function(json, textStatus){
+		var now = moment();
+		var nsURL;
+		var filterStation;
+		
+		if (now.format("HH")<"12")
+		{
+			nsURL = 'ns.php?station=HT';
+			startStation = "/'s-Hertogenbosch";
+			filterStation = "Eindhoven";
+		}
+		else
+		{
+			nsURL = 'ns.php?station=EHV';
+			startStation = "Eindhoven";
+			filterStation = "s-Hertogenbosch";
+		}
+		
+		$.getJSON(nsURL, function(json, textStatus){
 			var nsTable = $('<table />').addClass('ns-table').addClass('small');
 			var nsData = json.VertrekkendeTrein;
 			var opacity = 1;
+			
+			var startRow = $('<tr />');
+			startRow.append($('<td colspan="4"/>').html("Vertrektijden vanaf " + startStation));
+			nsTable.append(startRow);
 			$.each(nsData, function(idx, obj){
-				if((obj.EindBestemming=="Eindhoven")||
-				(obj.RouteTekst.indexOf("Eindhoven")>=0))
+				
+				var addToTable = false;
+				
+				if(obj.EindBestemming !== undefined)
+				{
+					if(obj.EindBestemming==filterStation)
+					{
+						addToTable = true;
+					}
+				}
+					
+				if(obj.RouteTekst !== undefined)
+				{
+					if(obj.RouteTekst.indexOf(filterStation)>=0)
+					{
+						addToTable = true;
+					}
+					
+				}
+				
+				if(addToTable)
 				{
 					var row = $('<tr />').css('opacity', opacity);
-					if(obj.TreinSoort=="Intercity")
+					
+					switch(obj.TreinSoort)
 					{
-						row.append($('<td/>').addClass('icon-small').addClass('train-ic'));
+						case "Intercity":
+							row.append($('<td/>').addClass('icon-small').addClass('train-ic'));
+							break;
+						case "Sprinter":
+							row.append($('<td/>').addClass('icon-small').addClass('train-sprinter'));
+							break;
+						default:
+							row.append($('<td/>'));
+							break;
 					}
-					else if(obj.TreinSoort=="Sprinter")
+					
+					
+					if(obj.VertrekSpoor !== undefined)					
 					{
-						row.append($('<td/>').addClass('icon-small').addClass('train-sprinter'));
+						row.append($('<td/>').html(obj.VertrekSpoor));
 					}
 					else
 					{
 						row.append($('<td/>'));
 					}
-					row.append($('<td/>').html(obj.VertrekSpoor));
-					row.append($('<td/>').html(obj.EindBestemming));
-					row.append($('<td/>').html(moment(obj.VertrekTijd).format("HH:mm")));
-					row.append($('<td/>').html(obj.VertrekVertragingTekst));
+					
+					if(obj.EindBestemming !== undefined)
+					{
+						row.append($('<td/>').html(obj.EindBestemming));
+					}
+					else
+					{
+						row.append($('<td/>'));
+					}
+					
+					if(obj.VertrekTijd !== undefined)
+					{
+						row.append($('<td/>').html(moment(obj.VertrekTijd).format("HH:mm")));
+					}
+					else
+					{
+						row.append($('<td/>'));
+					}
+					
+					if(obj.VertrekVertragingTekst !== undefined)
+					{
+						row.append($('<td/>').html(obj.VertrekVertragingTekst));
+					}
+					else
+					{
+						row.append($('<td/>'));
+					}	
 				
 					nsTable.append(row);
 					opacity -= 0.1;
@@ -177,7 +251,7 @@ jQuery(document).ready(function($) {
 		}
 
 
-		$.getJSON('http://api.openweathermap.org/data/2.5/weather', weatherParams, function(json, textStatus) {
+		$.getJSON('weather.php?type=weather', function(json, textStatus) {
 
 			var temp = roundVal(json.main.temp);
 			var temp_min = roundVal(json.main.temp_min);
@@ -232,7 +306,7 @@ jQuery(document).ready(function($) {
 			'13n':'wi-night-snow',
 			'50n':'wi-night-alt-cloudy-windy'
 		}
-			$.getJSON('http://api.openweathermap.org/data/2.5/forecast', weatherParams, function(json, textStatus) {
+			$.getJSON('weather.php?type=forecast', function(json, textStatus) {
 
 			var forecastData = {};
 

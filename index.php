@@ -16,7 +16,6 @@
 
 <script src="js/jquery.js"></script>
 <script src="js/moment-with-langs.min.js"></script>
-<script src="js/config.js"></script>
 <script src="js/control.js"></script>
 
 <div class="top left">
