@@ -20,18 +20,18 @@ body, html {
 .top
 {
 	position: absolute;
-	top: 50px;
+	top: 0px;
 }
 
 .left
 {
 	position: absolute;
-	left: 50px;
+	left: 0px;
 }
 .right
 {
 	position: absolute;
-	right: 50px;
+	right: 0px;
 	text-align: right;
 }
 
@@ -194,6 +194,19 @@ body, html {
 .forecast-table .day
 {
 	color: #999;
+}
+
+.rainradar
+{
+	float: right;
+	padding-top: 20px;
+    filter: url(css/filters.svg#rainradar);
+  
+}
+
+.rainradar img 
+{
+	width: 190px;
 }
 
 .calendar-table {

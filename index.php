@@ -29,6 +29,11 @@
 	<div class="windsun small dimmed"></div>
 	<div class="temp"></div>
 	<div class="forecast small dimmed"></div>
+	<div class="rainradar">
+		<img src="http://api.buienradar.nl/image/1.0/RadarMapNL?w=256&h=256" />
+	</div>	
+	
+	
 </div>
 
 

@@ -78,14 +78,14 @@ jQuery(document).ready(function($) {
 		if (now.format("HH")<"12")
 		{
 			nsURL = 'ns.php?station=HT';
-			startStation = "/'s-Hertogenbosch";
-			filterStation = "Eindhoven";
+			startStation = "s-Hertogenbosch";
+			stopStation = "Eindhoven";
 		}
 		else
 		{
 			nsURL = 'ns.php?station=EHV';
 			startStation = "Eindhoven";
-			filterStation = "s-Hertogenbosch";
+			stopStation = "s-Hertogenbosch";
 		}
 		
 		$.getJSON(nsURL, function(json, textStatus){
@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
 			var opacity = 1;
 			
 			var startRow = $('<tr />');
-			startRow.append($('<td colspan="4"/>').html("Vertrektijden vanaf " + startStation));
+			startRow.append($('<td colspan="4"/>').html(startStation + " -> " + stopStation));
 			nsTable.append(startRow);
 			$.each(nsData, function(idx, obj){
 				
@@ -102,7 +102,7 @@ jQuery(document).ready(function($) {
 				
 				if(obj.EindBestemming !== undefined)
 				{
-					if(obj.EindBestemming==filterStation)
+					if(obj.EindBestemming==stopStation)
 					{
 						addToTable = true;
 					}
@@ -110,7 +110,7 @@ jQuery(document).ready(function($) {
 					
 				if(obj.RouteTekst !== undefined)
 				{
-					if(obj.RouteTekst.indexOf(filterStation)>=0)
+					if(obj.RouteTekst.indexOf(stopStation)>=0)
 					{
 						addToTable = true;
 					}
