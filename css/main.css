@@ -200,8 +200,8 @@ body, html {
 {
 	float: right;
 	padding-top: 20px;
-    filter: url(css/filters.svg#rainradar);
-  
+	filter: url(css/filters.svg#rainradar);
+	-webkit-filter: url(css/filters.svg#rainradar);
 }
 
 .rainradar img 
