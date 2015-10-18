@@ -36,6 +36,46 @@ function kmh2beaufort(kmh)
 	return 12;
 }
 
+function getRainForcast(divId, lat, lon)
+{
+	$.getJSON('rain.php?lat='+lat+'&lon='+lon, function(json, textStatus) {
+
+		$(divId).highcharts({
+			chart: {
+				type: 'column',
+				backgroundColor: '#000',
+			},
+			title: {
+				text: ''
+			},
+			legend: {
+				enabled: false
+			},
+			xAxis: {
+				categories: json.time					
+			},
+			yAxis: {
+				min: 0,
+				gridLineColor: '#555',
+				title: {
+					text: '(mm/h)'
+				}
+			},
+			plotOptions: {
+				column: {
+					pointPadding: 0.2,
+					borderWidth: 0
+				}
+			},
+			series: [{
+				data: json.values,
+				name: "rain",
+				color: '#eee'
+			}]
+		});		
+	});
+}
+
 jQuery(document).ready(function($) {
 
     moment.lang('nl');
@@ -186,9 +226,6 @@ jQuery(document).ready(function($) {
 	})();
 	
 	
-	// 118.7
-	// 134,4
-
 	(function updateTraffic()
 	{
 		$.getJSON('traffic.php', function(json, textStatus){
@@ -365,6 +402,16 @@ jQuery(document).ready(function($) {
 		
 		setTimeout(function() {
 			updateRainRadar();
+		}, 180000);
+	})();
+	
+	(function updateRainForecast(){
+
+		getRainForcast("#rainforecast1", "51.721823", "5.246234");
+		getRainForcast("#rainforecast2", "51.425105", "5.472149");
+	
+		setTimeout(function() {
+			updateRainForecast();
 		}, 180000);
 	})();
 });

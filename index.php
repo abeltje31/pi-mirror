@@ -26,7 +26,10 @@
 
 <script src="js/jquery.js"></script>
 <script src="js/moment-with-langs.min.js"></script>
+<script src="js/highcharts.js"></script>
 <script src="js/control.js"></script>
+
+
 
 <div class="top left">
 	<div class="date small dimmed"></div>
@@ -39,9 +42,15 @@
 	<div class="windsun small dimmed"></div>
 	<div class="temp"></div>
 	<div class="forecast small dimmed"></div>
-	<div class="rainradar"></div>	
-	
-	
+	<div class="rainradar small dimmed"></div>	
+	<div class="rainforecast xxsmall dimmed">
+		<p>'s-Hertogenbosch</p>
+		<div id="rainforecast1"class="rainforecastchart"></div>	
+	</div>
+	<div class="rainforecast xxsmall dimmed">
+		<p>Eindhoven</p>
+		<div id="rainforecast2" class="rainforecastchart"></div>	
+	</div>
 </div>
 
 

@@ -180,7 +180,6 @@ body, html {
 
 .rainradar
 {
-	float: right;
 	padding-top: 20px;
 	filter: url(css/filters.svg#rainradar);
 	-webkit-filter: url(css/filters.svg#rainradar);
@@ -189,6 +188,17 @@ body, html {
 .rainradar img 
 {
 	width: 190px;
+}
+
+.rainforecast
+{
+	padding-top: 50px;
+	width: 250px;
+}
+
+.rainforecastchart
+{
+	height: 150px;
 }
 
 .calendar-table {
