@@ -2,7 +2,18 @@
 <html>
 <head>
 	<style type="text/css">
-		<?php include('css/main.css') ?>
+		<?php 		
+			$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+			if ($hostname == "localhost")
+			{
+				include('css/local.css');
+			}
+			else
+			{
+				include('css/remote.css');
+			}
+			include('css/main.css');
+		?>
 	</style>
 	<link rel="stylesheet" type="text/css" href="css/weather-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/train-icons.css">
@@ -12,7 +23,6 @@
 </head>
 
 <body>
-
 
 <script src="js/jquery.js"></script>
 <script src="js/moment-with-langs.min.js"></script>
@@ -29,9 +39,7 @@
 	<div class="windsun small dimmed"></div>
 	<div class="temp"></div>
 	<div class="forecast small dimmed"></div>
-	<div class="rainradar">
-		<img src="http://api.buienradar.nl/image/1.0/RadarMapNL?w=256&h=256" />
-	</div>	
+	<div class="rainradar"></div>	
 	
 	
 </div>

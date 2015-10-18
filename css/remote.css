@@ -1,0 +1,17 @@
+.top
+{
+	position: absolute;
+	top: 25px;
+}
+
+.left
+{
+	position: absolute;
+	left: 25px;
+}
+.right
+{
+	position: absolute;
+	right: 25px;
+	text-align: right;
+}

@@ -281,7 +281,7 @@ jQuery(document).ready(function($) {
 
 		setTimeout(function() {
 			updateCurrentWeather();
-		}, 300000);
+		}, 180000);
 	})();
 	
 		(function updateWeatherForecast()
@@ -353,6 +353,18 @@ jQuery(document).ready(function($) {
 
 		setTimeout(function() {
 			updateWeatherForecast();
-		}, 60000);
+		}, 300000);
+	})();
+	
+	
+	(function updateRainRadar(){
+		
+		d = new Date();
+		var img = $('<img />').attr('src', 'http://api.buienradar.nl/image/1.0/RadarMapNL?w=256&h=256'+d.getTime());
+		$('.rainradar').html(img);
+		
+		setTimeout(function() {
+			updateRainRadar();
+		}, 180000);
 	})();
 });
